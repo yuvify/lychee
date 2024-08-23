@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lychee</title>
     <link rel="stylesheet" href="/style.css" />
-</head>
+  </head>
+  <body>
+    <div id="taskbar">
+      <button
+        class="icon-button"
+        onclick="toggleWindow('https://inf.stonklat.com/', 'browser')"
+      >
+        b
+        <span class="label">browser</span>
+      </button>
+      <button
+        class="icon-button"
+        onclick="toggleWindow('https://empyreus.vercel.app', 'empyreus')"
+      >
+        e
+        <span class="label">empyreus</span>
+      </button>
+    </div>
 
-<body>
-    <h1>hello</h1>
-</body>
+    <div id="webos-window" class="webos-window hidden">
+      <div class="window-header" id="webos-window-header">
+        <span id="window-title">Window</span>
+        <div class="window-controls">
+          <button onclick="minimizeWindow()">_</button>
+          <button onclick="closeWindow()">X</button>
+        </div>
+      </div>
+      <iframe id="window-content" src="" frameborder="0"></iframe>
+      <div class="resize-handle"></div>
+    </div>
 
+    <script src="/script.js"></script>
+  </body>
 </html>
